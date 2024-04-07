@@ -1,29 +1,20 @@
 package com.jetbrains.FitnessApplication.run;
 
-import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Repository
-public class RunRepository {
-    private static final Logger logger = LoggerFactory.getLogger(RunRepository.class);
+public class JdbcClientRunRepository {
+    private static final Logger logger = LoggerFactory.getLogger(JdbcClientRunRepository.class);
     private final JdbcClient jdbcClient;
 
-    public RunRepository(JdbcClient jdbcClient) {
+    public JdbcClientRunRepository(JdbcClient jdbcClient) {
         this.jdbcClient = jdbcClient;
     }
 
