@@ -22,7 +22,6 @@ public class RunController {
         return runRepository.findAll();
     }
 
-    //GET
     @GetMapping("/{id}")
     Run findById(@PathVariable Integer id) {
         if (runRepository.findById(id).isPresent()) {

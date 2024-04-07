@@ -2,7 +2,6 @@ package com.jetbrains.FitnessApplication.run;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
